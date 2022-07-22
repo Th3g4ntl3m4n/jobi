@@ -32,7 +32,7 @@ class CompaniesController extends Controller
          
         $companies = new companies();
         $companies->user_id = $user_id;        
-        $companies->ofert_id = $request ->jobtitle;
+        $companies->jobtitle= $request ->jobtitle;
         $companies->jobcategory = $request ->jobcategory;
         $companies->companyname = $request ->companyname;
         $companies->companyemail = $request ->companyemail;

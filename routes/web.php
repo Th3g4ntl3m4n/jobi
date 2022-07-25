@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\OffersController;
 use App\Http\Controllers\CvController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -8,7 +8,7 @@ use App\Http\Controllers\PageController;
 
 Route::controller(PageController::class)->group(function(){
     Route::get('/',            'home')->name('home');
-    Route::get('/companies',            'companies')->name('companies');
+    
 });
 
 Route::get('/formcv', function () {
@@ -34,25 +34,25 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('cvs', CvController::class);
-Route::resource('Comp', CompaniesController::class);
+Route::resource('Comp', OffersController::class);
 
 
-Route::resource('Comp', 'App\Http\Controllers\CompaniesController');
-Route::get('Comp/{id}/show', 'App\Http\Controllers\CompaniesController@show')->name('companies.show');
+Route::resource('Comp', 'App\Http\Controllers\OffersController');
+Route::get('Comp/{id}/show', 'App\Http\Controllers\OffersController@show')->name('offers.show');
 
-Route::get('companies', 'App\Http\Controllers\CompaniesController@index')->name('companies.index');
+Route::get('Offers', 'App\Http\Controllers\OffersController@index')->name('offers.index');
 
 Route::post('/create_user', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('user.store');
 
 
-Route::get('jobs/{job}', [CompaniesController::class, 'showjob'])->name('jobs.showjob');
+Route::get('jobs/{job}', [OffersController::class, 'showjob'])->name('jobs.showjob');
 
 
-Route::get('/showalljobs', [CompaniesController::class, 'ShowAllJobs'])->name('showalljobs');
+Route::get('/showalljobs', [OffersController::class, 'ShowAllJobs'])->name('showalljobs');
 Route::get('/showallusers', [CvController::class, 'ShowAllUsers'])->name('showallusers');
 Route::get('/showallcompanies', [CvController::class, 'ShowAllcompanies'])->name('showallcompanies');
 
-Route::get('/{id}/details', 'App\Http\Controllers\CompaniesController@showJobDetails')->name('details');
+Route::get('/{id}/details', 'App\Http\Controllers\OffersController@showJobDetails')->name('details');
 
 Route::get('/logout', 'App\Http\Controllers\LogoutController@logout')->name('logout');
 

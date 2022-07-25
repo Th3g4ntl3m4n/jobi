@@ -64,7 +64,7 @@
 
 		<!-- Publicacion geenral de empleos -->
 			<div class="row">
-			@foreach($companies as $company)
+			@foreach($offers as $offer)
 					<div class="col-sm-6">					
 						<div class="job-card">						
 							<div class="row align-items-center">
@@ -79,21 +79,21 @@
 								<div class="col-lg-6">
 									<div class="job-info">
 										<h3>
-											<a href="{{$company['id'] }}/details">{{$company['jobtitle']}}</a>
+											<a href="{{$offer['id'] }}/details">{{$offer['jobtitle']}}</a>
 										</h3>
 										<ul>
-											<li>Via <a href="#">{{$company['companyname']}}</a></li>
+											<li>Via <a href="#">{{$offer['companyname']}}</a></li>
 											<li>
 												<i class='bx bx-location-plus'></i>
-												{{$company['companylocation']}}
+												{{$offer['companylocation']}}
 											</li>
 											<li>
 												<i class='bx bx-filter-alt' ></i>
-												{{$company['jobcategory']}}
+												{{$offer['jobcategory']}}
 											</li>
 											<li>
 												<i class='bx bx-briefcase' ></i>
-												{{$company['jobtype']}}
+												{{$offer['jobtype']}}
 											</li>
 										</ul>
 									</div>
@@ -107,7 +107,7 @@
 										</a>
 										<p>
 											<i class='bx bx-stopwatch' ></i>
-											{{$company['jobexperience']}}
+											{{$offer['jobexperience']}}
 										</p>
 									</div>
 								</div>

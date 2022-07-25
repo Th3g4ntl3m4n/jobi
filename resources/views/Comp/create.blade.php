@@ -18,14 +18,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Job Title</label>
-                                <input type="text" class="form-control" id="exampleInput1" name="jobtitle" placeholder="Job Title or Keyword" required value="{{ old('jobtitle'), $companies->jobtitle }}">
+                                <input type="text" class="form-control" id="exampleInput1" name="jobtitle" placeholder="Job Title or Keyword" required value="{{ old('jobtitle'), $offers->jobtitle }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Job Category</label>
-                                <input type="text" class="form-control" id="exampleInput1" name="jobcategory" placeholder="Job Category" required value="{{ old('jobcategory'), $companies->jobcategory }}">
+                                <input type="text" class="form-control" id="exampleInput1" name="jobcategory" placeholder="Job Category" required value="{{ old('jobcategory'), $offers->jobcategory }}">
 
                                 <!--
                                 <select class="category">
@@ -43,35 +43,35 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Company Name</label>
-                                <input type="text" class="form-control" id="exampleInput2" name="companyname" placeholder="Company Name" required value="{{ old('companyname'), $companies->companyname }}">
+                                <input type="text" class="form-control" id="exampleInput2" name="companyname" placeholder="Company Name" required value="{{ old('companyname'), $offers->companyname }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Company Email</label>
-                                <input type="email" class="form-control" id="exampleInput3" name="companyemail" placeholder="e.g. hello@company.com" required  value="{{ old('companyemail'), $companies->companyemail }}">
+                                <input type="email" class="form-control" id="exampleInput3" name="companyemail" placeholder="e.g. hello@company.com" required  value="{{ old('companyemail'), $offers->companyemail }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Company Website (Optional)</label>
-                                <input type="text" class="form-control" id="exampleInput4" name="companyweb" placeholder="e.g www.companyname.com" value="{{ old('companyweb'), $companies->companyweb }}">
+                                <input type="text" class="form-control" id="exampleInput4" name="companyweb" placeholder="e.g www.companyname.com" value="{{ old('companyweb'), $offers->companyweb }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Location</label>
-                                <input type="text" class="form-control" id="exampleInput5" name="companylocation" placeholder="e.g. London" required value="{{ old('companylocation'), $companies->companylocation }}">
+                                <input type="text" class="form-control" id="exampleInput5" name="companylocation" placeholder="e.g. London" required value="{{ old('companylocation'), $offers->companylocation }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Job Type</label>
-                                <input type="text" class="form-control" id="exampleInput1" name="jobtype" placeholder="Job type" required value="{{ old('jobtype'), $companies->jobtype }}">
+                                <input type="text" class="form-control" id="exampleInput1" name="jobtype" placeholder="Job type" required value="{{ old('jobtype'), $offers->jobtype }}">
                                 <!--
                                 <select class="category">
                                     <option data-display="Job Type">Job Type</option>
@@ -86,28 +86,28 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Job Tags</label>
-                                <input type="text" class="form-control" id="exampleInput6" name="jobtags" placeholder="e.g. web design, graphics design, video editing" required value="{{ old('jobtags'), $companies->jobtags }}">
+                                <input type="text" class="form-control" id="exampleInput6" name="jobtags" placeholder="e.g. web design, graphics design, video editing" required value="{{ old('jobtags'), $offers->jobtags }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Salary (Optional)</label>
-                                <input type="number" class="form-control" id="exampleInput7" name="jobsalary" placeholder="e.g. $20,000" value="{{ old('jobsalary'), $companies->jobsalary }}">
+                                <input type="number" class="form-control" id="exampleInput7" name="jobsalary" placeholder="e.g. $20,000" value="{{ old('jobsalary'), $offers->jobsalary }}">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Experience</label>
-                                <input type="text" class="form-control" id="exampleInput8" name="jobexperience" placeholder="e.g. 1 year" required value="{{ old('jobexperience'), $companies->jobexperience }}">
+                                <input type="text" class="form-control" id="exampleInput8" name="jobexperience" placeholder="e.g. 1 year" required value="{{ old('jobexperience'), $offers->jobexperience }}">
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Job Description</label>
-                                <textarea class="form-control description-area" id="exampleFormControlTextarea1" rows="6" name="jobdescription" placeholder="Job Description" required value="{{ old('jobdescription'), $companies->jobdescription }}"></textarea>
+                                <textarea class="form-control description-area" id="exampleFormControlTextarea1" rows="6" name="jobdescription" placeholder="Job Description" required value="{{ old('jobdescription'), $offers->jobdescription }}"></textarea>
                             </div>
                         </div>
 

@@ -24,9 +24,9 @@ class Applyes extends Model
     
 }
 
-public function companies() 
+public function offers() 
     {
-        return $this->hasMany(companies::class);
+        return $this->hasMany(offers::class);
     }
 
 }

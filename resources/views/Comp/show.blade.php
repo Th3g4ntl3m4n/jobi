@@ -16,13 +16,13 @@
                 <a href="{{ route('Comp.create')}}" class="signin-btn">Publish a new Job</a>
             <!-- End Publish your job --> 
 
-			<h1>{{$companies[0]['companyname']}}</h1>
+			<h1>{{$offers[0]['companyname']}}</h1>
 
 
 			
 
 				<div class="row">
-				@foreach($companies as $company)
+				@foreach($offers as $offer)
 					<div class="col-md-6">
 						<div class="job-card">
 							<div class="row align-items-center">
@@ -38,21 +38,21 @@
 
 								<div class="col-lg-6">
 									<div class="job-info">
-										<a href="{{$company['id'] }}/details"><h3> {{$companies[0]['jobtitle']}}</h3></a>
+										<a href="{{$offer['id'] }}/details"><h3> {{$offers[0]['jobtitle']}}</h3></a>
 											
 										<ul>
-											<li>Via <a href="#">{{$companies[0]['jobcategory']}}</a></li>
+											<li>Via <a href="#">{{$offers[0]['jobcategory']}}</a></li>
 											<li>
 												<i class='bx bx-location-plus'></i>
-												{{$companies[0]['companylocation']}}
+												{{$offers[0]['companylocation']}}
 											</li>
 											<li>
 												<i class='bx bx-filter-alt' ></i>
-												{{$companies[0]['jobtsalary']}}
+												{{$offers[0]['jobtsalary']}}
 											</li>
 											<li>
 												<i class='bx bx-briefcase' ></i>
-												{{$companies[0]['jobtype']}}
+												{{$offers[0]['jobtype']}}
 											</li>
 										</ul>
 									</div>

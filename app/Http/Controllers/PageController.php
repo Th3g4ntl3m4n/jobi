@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 
-use App\Models\companies;
+use App\Models\offers;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,8 +12,8 @@ class PageController extends Controller
     public function home(Request $request) 
     {
        
-        $companies = companies::latest()->paginate();
-        return view('home',['companies' => $companies]);
+        $offers = offers::latest()->paginate();
+        return view('home',['offers' => $offers]);
         
 
     }

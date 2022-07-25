@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Applyes;
-use App\Models\companies;
+use App\Models\offers;
 use App\Models\User;
 
 

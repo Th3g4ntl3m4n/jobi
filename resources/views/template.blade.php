@@ -63,7 +63,7 @@
 		<div class="navbar-area">
 			<!-- Menu For Mobile Device -->
 			<div class="mobile-nav">
-				<a href="index.html" class="logo">
+				<a href="{{ route('home')}}" class="logo">
 					<img src="{{ asset('img/logojobi.png')}}" style="width: 100px; height: 100px;" alt="logo">
 				</a>
 			</div>
@@ -72,13 +72,14 @@
 			<div class="main-nav">
 				<div class="container">
 					<nav class="navbar navbar-expand-lg navbar-light">
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="{{ route('home')}}">
 							<img src="{{ asset('img/logojobi.png')}}" style="width: 200px; height: 100px;" alt="logo">
 						</a>
 						<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 							<ul class="navbar-nav m-auto">
 								<li class="nav-item">
 									<a href="#" class="nav-link dropdown-toggle active">Home</a>
+									<!--
 									<ul class="dropdown-menu">
 										<li class="nav-item">
 											<a href="index.html" class="nav-link active">Home One</a>
@@ -96,13 +97,15 @@
 											<a href="index-five.html" class="nav-link">Home Five</a>
 										</li>
 									</ul>
+									-->
 								</li>
 								<li class="nav-item">
-									<a href="about.html" class="nav-link">About</a>
+									<a href="about.html" class="nav-link">About Us</a>
 								</li>
 								<li class="nav-item">
 									<a href="#" class="nav-link dropdown-toggle">Jobs</a>
 
+									<!--
 									<ul class="dropdown-menu">
 										<li class="nav-item">
 											<a href="find-job.html" class="nav-link">Find A Job</a>
@@ -120,7 +123,9 @@
 											<a href="job-details.html" class="nav-link">Job Details</a>
 										</li>
 									</ul>
-								</li>                
+										-->
+								</li>
+								<!--                
 								<li class="nav-item">
 									<a href="#" class="nav-link dropdown-toggle">Candidates</a>
 									<ul class="dropdown-menu">
@@ -132,6 +137,7 @@
 										</li>
 									</ul>
 								</li>
+								
 								<li class="nav-item">
 									<a href="#" class="nav-link dropdown-toggle">Pages</a>
 									<ul class="dropdown-menu">
@@ -187,8 +193,11 @@
 										</li>
 									</ul>
 								</li>
+
+								-->
 								<li class="nav-item">
 									<a href="#" class="nav-link dropdown-toggle">Blog</a>
+									<!--
 									<ul class="dropdown-menu">
 										<li class="nav-item">
 											<a href="blog.html" class="nav-link">Blog</a>
@@ -200,6 +209,7 @@
 											<a href="blog-details.html" class="nav-link">Blog Details</a>
 										</li>
 									</ul>
+									-->
 								</li>
 								<li class="nav-item">
 									<a href="contact.html" class="nav-link">Contact Us</a>

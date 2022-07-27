@@ -10,7 +10,7 @@
 					<div class="container"> 
 						<div class="banner-content text-center">
 							<p>Find Jobs, Employment & Career Opportunities</p>
-							<h1>Drop Resume & Get Your Desire Job!</h1>
+							<h1>site under construction</h1>
 
 							<form action="{{ route('home')}}" method="GET" class="banner-form">
 								<div class="row">

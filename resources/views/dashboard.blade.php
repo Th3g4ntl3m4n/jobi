@@ -70,7 +70,7 @@ $user_type= Auth::user()->type;
           <a href="{{ route('cvs.create')}}" type="button" class="btn btn-danger">Completa tu CV</a>
           @break
             @case('2')
-           <button type="button" class="btn btn-outline-light me-2">Dashboard</button>            
+           <a href="{{ route('companies.create')}}" type="button" class="btn btn-outline-light me-2">Completa tu informacion</a>            
           <a href="{{ route('Comp.create')}}" type="button" class="btn btn-warning">Publica tu oferta</a>
           @break
         @endswitch

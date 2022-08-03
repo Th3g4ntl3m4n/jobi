@@ -5,21 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cv extends Model
+class Companies extends Model
 {
-    protected $table = 'cv';
-    
+
+    protected $table = 'companies';
+
     use HasFactory;
 
     protected $fillable = [
-      
+              
         'phone',
-        'ciudad',
-        'DniNumber',
-      
+        'city',
+        'country',
+        'web',
+        'address',
+        'description',
     ];
 
-    public function user() {
+    Public function user() {
 
         //lo vinculamos con el modelo User
 

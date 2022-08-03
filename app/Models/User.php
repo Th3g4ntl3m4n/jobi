@@ -54,6 +54,11 @@ class User extends Authenticatable
         return $this->belongsTo(Cv::class);
     }
 
+    public function companies() 
+    {
+        return $this->belongsTo(Companies::class);
+    }
+
     public function academys() 
     {
         return $this->hasMany(Academy::class);

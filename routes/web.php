@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OffersController;
+use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\CvController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
@@ -34,11 +35,19 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('cvs', CvController::class);
+Route::resource('companies', CompaniesController::class);
 Route::resource('Comp', OffersController::class);
 
 
 Route::resource('Comp', 'App\Http\Controllers\OffersController');
-Route::get('Comp/{id}/show', 'App\Http\Controllers\OffersController@show')->name('offers.show');
+
+//Ruta Antigua
+//Route::get('Comp/{id}/show', 'App\Http\Controllers\OffersController@show')->name('offers.show');
+
+//Ruta Nueva para pasar id como parametro a una ruta
+Route::get('Comp/{id}/show', 'App\Http\Controllers\OffersController@show' ,function($id){
+    //
+})->name('offers.show');
 
 Route::get('Offers', 'App\Http\Controllers\OffersController@index')->name('offers.index');
 
@@ -69,5 +78,13 @@ Route::controller(CompaniesController::class)->group(function(){
 
 Route::resource('cvs', 'App\Http\Controllers\CvController');
 Route::get('/{id}/show', 'App\Http\Controllers\CvController@show')->name('cv.show');
+
+//Ruta antigua para recibir parametro ID
+//Route::get('companies/{id}/show', 'App\Http\Controllers\CompaniesController@show')->name('companies.show');
+
+//Ruta Nueva para recibir parametro ID en la ruta
+Route::get('companies/{id}/show', 'App\Http\Controllers\CompaniesController@show' ,function($id){
+    //
+})->name('companies.show');
 
 require __DIR__.'/auth.php';

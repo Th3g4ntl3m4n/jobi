@@ -1,7 +1,5 @@
-@php
-
-@endphp
 @extends('dashboard')
+
 @section('content')
 
 <head>
@@ -46,7 +44,7 @@
                             <div class="resume-thumb-area text-center">
                                 <img src="{{ asset('img/account.jpg')}}" alt="account image">
                                 <h3>{{ $user->name }}</h3>
-                                <p>{{$academys[0]['schooltitle']}}</p>
+                                <p>{{$companies[0]['phone']}}</p>
                                 
                                 <div class="social-links">
                                     <a href="#" target="-blank">
@@ -114,9 +112,9 @@
                                 </h3>
 
                                 <div class="education-info">
-                                    <span>{{$academys[0]['endyear']}}</span>
-                                    <h5>{{$academys[0]['schooltitle']}}</h5>
-                                    <h4>{{$academys[0]['school']}}</h4>
+                                    <span></span>
+                                    <h5></h5>
+                                    <h4></h4>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 </div>
                                 <!--
@@ -142,15 +140,15 @@
                                 </h3>
 
                                 <div class="experience-info">
-                                    <span>{{$experiences[0]['yearfinishtwork']}}</span>
-                                    <h5>{{$experiences[0]['position']}}</h5>
-                                    <h4>{{$experiences[0]['company']}}</h4>
+                                    <span></span>
+                                    <h5></h5>
+                                    <h4></h4>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 </div>
                                 <div class="experience-info">
-                                    <span>{{$experiences[0]['yearfinishtwork']}}</span>
-                                    <h5>{{$experiences[0]['position']}}</h5>
-                                    <h4>{{$experiences[0]['company']}}</h4>
+                                    <span></span>
+                                    <h5></h5>
+                                    <h4></h4>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 </div>
                             </div>
@@ -228,5 +226,6 @@
 		<script src="assets/js/custom.js"></script>
   	</body>
 </html>
+
 
 @endsection

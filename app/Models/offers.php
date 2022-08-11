@@ -25,6 +25,8 @@ class offers extends Model
         'jobsalary',
         'jobexperience',
         'jobdescription',
+        'applybefore',
+        'requirements',
         
     ];
 

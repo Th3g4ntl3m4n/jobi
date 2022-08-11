@@ -53,17 +53,17 @@
                                                         </li>
                                                         <li>
                                                             <i class='bx bx-filter-alt' ></i>
-                                                            {{$details ->jobtype}}
+                                                            {{$details ->jobcategory}}
                                                         </li>
                                                         <li>
                                                             <i class='bx bx-briefcase' ></i>
-                                                            Freelance
+                                                            {{$details ->jobtype}}
                                                         </li>
                                                     </ul>
                                                     
                                                     <span>
                                                         <i class='bx bx-paper-plane' ></i>
-                                                        Apply Before: June 01,2021
+                                                        Apply Before: {{ date('d-M-y', strtotime($details->applybefore)) }}
                                                     </span>
                                                 </div>
                                             </div>
@@ -79,6 +79,10 @@
                                     
                                     <div class="details-text">
                                         <h3>Requirements</h3>
+
+                                        <p>{{$details ->requirements}}</p>
+
+                                        <!--
                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
                                         <ul>
@@ -104,6 +108,7 @@
 
                                             </li>
                                         </ul>
+                                            -->
                                     </div>
 
                                     <div class="details-text">
@@ -195,7 +200,20 @@
 
                         <div class="job-sidebar">
                             <h3>Keywords</h3>
-                        
+                            <!-- Imprime los items de una casilla, separado por comas, metodo explode -->
+                            @php
+                                $result_explote = explode(',', $details->jobtags);
+
+                            @endphp
+
+                            <ul>
+                            @foreach( $result_explote as $keyword )
+                            <li>
+                            <a href="#">{{ $keyword }}</a>
+                            </li>
+                            @endforeach
+                            </ul>
+                            <!--
                             <ul>
                                 <li>
                                     <a href="#">Web Design</a>
@@ -225,7 +243,7 @@
                                     <a href="#">Video</a>
                                 </li>
                             </ul>
-                           
+                            -->
 
                         </div>
 

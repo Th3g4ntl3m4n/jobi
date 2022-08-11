@@ -23,6 +23,16 @@ return new class extends Migration
             $table->string('web');
             $table->string('address');
             $table->string('description');
+            $table->string('NumeroEmpleados');
+            $table->string('Category');
+            $table->string('Experiencia');
+            $table->string('nit');
+
+            $table->string('NombreRepresentante');
+            $table->string('CargoRepresentante');
+            $table->string('EmailRepresentante');
+            $table->string('MovilRepresentante');
+            $table->string('FijoRepresentante');
 
 
             $table->timestamps();

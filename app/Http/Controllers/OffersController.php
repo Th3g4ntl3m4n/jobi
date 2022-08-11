@@ -42,7 +42,9 @@ class OffersController extends Controller
         $offers->jobtags = $request ->jobtags;
         $offers->jobsalary = $request ->jobsalary;
         $offers->jobexperience= $request ->jobexperience;
-        $offers->jobdescription= $request ->jobdescription;        
+        $offers->jobdescription= $request ->jobdescription;
+        $offers->applybefore= $request ->applybefore;         
+        $offers->requirements= $request ->requirements;   
         $offers->save();
      
         

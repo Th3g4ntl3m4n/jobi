@@ -20,6 +20,17 @@ class Companies extends Model
         'web',
         'address',
         'description',
+        'NumeroEmpleados',
+        'Category',
+        'Experiencia',
+        'nit',
+        'NombreRepresentante',
+        'CargoRepresentante',
+        'EmailRepresentante',
+        'MovilRepresentante',
+        'FijoRepresentante',
+
+
     ];
 
     Public function user() {

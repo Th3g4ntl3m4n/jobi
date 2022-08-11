@@ -41,6 +41,17 @@ class CompaniesController extends Controller
         $companies->web = $request ->web;
         $companies->address = $request ->address;
         $companies->description = $request ->description;
+        $companies->NumeroEmpleados = $request ->NumeroEmpleados;
+        $companies->Category = $request ->Category;
+        $companies->Experiencia = $request ->Experiencia;
+        $companies->nit = $request ->nit;
+        $companies->NombreRepresentante = $request ->NombreRepresentante;
+        $companies->CargoRepresentante = $request ->CargoRepresentante;
+        $companies->EmailRepresentante = $request ->EmailRepresentante;
+        $companies->MovilRepresentante = $request ->MovilRepresentante;
+        $companies->FijoRepresentante = $request ->FijoRepresentante;
+
+
         $companies->save(); 
         return view('dashboard')->with('companies', $companies);
        

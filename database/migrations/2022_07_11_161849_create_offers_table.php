@@ -29,6 +29,8 @@ return new class extends Migration
             $table->string('jobsalary');
             $table->string('jobexperience');
             $table->string('jobdescription');
+            $table->string('applybefore');
+            $table->string('requirements');
             
             $table->timestamps();
         });

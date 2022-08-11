@@ -1,0 +1,40 @@
+.facebook{
+    
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header-video {
+    position: relative;    
+    overflow: hidden;
+    z-index: 1;
+  }
+
+.overlay {
+    height: 900px;
+    width: 100vw;
+    position: relative;
+    background: #303952;
+    z-index: 2;
+    opacity: .85;
+    
+}
+
+.content {
+    z-index: 3;
+    overflow: hidden;
+    
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    
+  }
+  
+  .content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+  }

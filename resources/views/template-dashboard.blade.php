@@ -15,16 +15,6 @@ $user_type= Auth::user()->type;
     <meta name="generator" content="Hugo 0.98.0">
     <title>Dashboard JOBI v1.0</title>
 <style>
-
-.containter-canvas1{
-  display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #ED3237;
-    background-image:url({{url('img/banner/2.jpg')}}) ;
-    background-size: cover;
-    height:100vh ;
-}
-
   .containter-canvas{
 
     display: grid;
@@ -167,39 +157,6 @@ $user_type= Auth::user()->type;
 
       </div>
 
-      @switch($user_type)
-                            @case('0')
-                                @include('dashboard.case0')
-                            @break
- 
-                            @case('1')
-                            <div class="containter-canvas1">
-                              <div class="left">
-                                <h1>Completa tu CV</h1>
-                                <a href="{{ route('cvs.create')}}" class="btn btn-danger">Completa tu CV</a> <br>
-                                <img src="{{ asset('img/logojobi.png')}}" alt="" width="250px" height="150px">
-                              </div>
-                              <div class="rigth">rigth</div>
-                            </div>                        
-                           
-                            @break
-
-                            @case('2')                            
-                                                   
-                            <div class="containter-canvas">
-                              <div class="left">
-                                <h1>Publica una Oferta</h1>
-                                <a href="{{ route('Comp.create')}}" class="btn btn-warning">Publica tu oferta</a> <br>
-                                <img src="{{ asset('img/logojobi.png')}}" alt="" width="250px" height="150px">
-                              </div>
-                              <div class="rigth">rigth</div>
-                            </div> 
-                            
-                            @break
- 
-                            @default
-                                @include('auth.login')
-                        @endswitch
      
          @yield('content')
 

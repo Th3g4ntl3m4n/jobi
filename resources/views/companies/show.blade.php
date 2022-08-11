@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('template-dashboard')
 
 @section('content')
 
@@ -44,7 +44,7 @@
                             <div class="resume-thumb-area text-center">
                                 <img src="{{ asset('img/account.jpg')}}" alt="account image">
                                 <h3>{{ $user->name }}</h3>
-                                <p>{{$companies[0]['phone']}}</p>
+                                <p>{{$companies[0]['nit']}}</p>
                                 
                                 <div class="social-links">
                                     <a href="#" target="-blank">
@@ -67,43 +67,83 @@
                             <div class="resume-content about-text">
                                 <h3>
                                     <i class='bx bx-user-circle'></i>
-                                    About Me
+                                    About Us
                                 </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                <p>{{$companies[0]['description']}}</p>
                             </div>
 
                             <div class="resume-content basic-info-text">
                                 <h3>
                                     <i class='bx bx-book-alt'></i>
-                                    Basic Info
+                                    Informacion Basica
                                 </h3>
                                 <ul>
                                     <li>
-                                        <span>Age:</span>
-                                        26
+                                        <span># de Empleados:</span>
+                                        {{$companies[0]['NumeroEmpleados']}}
                                     </li>
                                     <li>
-                                        <span>Category:</span>
-                                        Web Development
+                                        <span>Sector:</span>
+                                        {{$companies[0]['Category']}}
                                     </li>
                                     <li>
-                                        <span>Experience:</span>
-                                        4 years
+                                        <span>Experiencia:</span>
+                                        {{$companies[0]['Experiencia']}}
+                                    </li>
+                                    
+                                    <li>
+                                        <span>Contry:</span>
+                                        {{$companies[0]['country']}}
                                     </li>
                                     <li>
-                                        <span>Gender:</span>
-                                        Male
+                                        <span>Web</span>
+                                        {{$companies[0]['web']}}
                                     </li>
                                     <li>
-                                        <span>Status:</span>
-                                        Full Time
+                                        <span>Direccion:</span>
+                                        {{$companies[0]['address']}}
                                     </li>
                                     <li>
-                                        <span>Experience:</span>
-                                        4 years
+                                        <span>Telefono:</span>
+                                        {{$companies[0]['phone']}}
                                     </li>
+                                   
                                 </ul>
                             </div>
+
+                            <div class="resume-content basic-info-text">
+                                <h3>
+                                    <i class='bx bx-book-alt'></i>
+                                    Informacion Representante Legal
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <span>Nombre:</span>
+                                        {{$companies[0]['NombreRepresentante']}}
+                                    </li>
+                                    <li>
+                                        <span>Cargo:</span>
+                                        {{$companies[0]['CargoRepresentante']}}
+                                    </li>
+                                    <li>
+                                        <span>Email:</span>
+                                        {{$companies[0]['EmailRepresentante']}}
+                                    </li>
+                                    
+                                    <li>
+                                        <span>Movil:</span>
+                                        {{$companies[0]['MovilRepresentante']}}
+                                    </li>
+                                    <li>
+                                        <span>Fijo</span>
+                                        {{$companies[0]['FijoRepresentante']}}
+                                    </li>
+                                    
+                                   
+                                </ul>
+                            </div>
+
+                            <!--
 
                             <div class="resume-content education-text">
                                 <h3>
@@ -130,7 +170,7 @@
                                     <h4>Stanton College, USA</h4>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 </div>
-                                -->
+                                
                             </div>
 
                             <div class="resume-content  experience-text">

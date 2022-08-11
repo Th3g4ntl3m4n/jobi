@@ -30,6 +30,8 @@ Route::get('/details', function () {
 
 
 
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -68,12 +70,7 @@ Route::get('/logout', 'App\Http\Controllers\LogoutController@logout')->name('log
 
 Route::post('/makeApply', 'App\Http\Controllers\ApplyesController@store')->name('makeApply');
 
-/*
-Route::controller(CompaniesController::class)->group(function(){
-    Route::get('/companies/create',            'create')->name('companies.create');
-    Route::get('/companies/store',            'store')->name('companies.store');
-   // Route::get('/companies',            'companies')->name('companies');
-});*/
+
 
 
 Route::resource('cvs', 'App\Http\Controllers\CvController');

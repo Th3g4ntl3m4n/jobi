@@ -71,7 +71,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Job Type</label>
-                                <input type="text" class="form-control" id="exampleInput1" name="jobtype" placeholder="Job type" required value="{{ old('jobtype'), $offers->jobtype }}">
+                                <input type="text" class="form-control" id="exampleInput1" name="jobtype" placeholder="Full time" required value="{{ old('jobtype'), $offers->jobtype }}">
                                 <!--
                                 <select class="category">
                                     <option data-display="Job Type">Job Type</option>
@@ -80,6 +80,7 @@
                                     <option value="4">Freelancer</option>
                                 </select>
                                 -->
+                              
                             </div>
                         </div>
 
@@ -104,12 +105,27 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Apply Before</label>
+                                <input type="datetime-local" class="form-control" id="exampleInput9" name="applybefore" placeholder="04 agt 2022" required value="{{ old('applybefore'), $offers->applybefore }}">
+                            </div>
+                        </div>   
+                        
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Requisitos</label>
+                                <textarea class="form-control description-area" id="exampleFormControlTextarea2" rows="6" name="requirements" placeholder="Job requirements" required value="{{ old('requirements'), $offers->requirements }}"></textarea>
+                            </div>
+                        </div>
+
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Job Description</label>
                                 <textarea class="form-control description-area" id="exampleFormControlTextarea1" rows="6" name="jobdescription" placeholder="Job Description" required value="{{ old('jobdescription'), $offers->jobdescription }}"></textarea>
                             </div>
                         </div>
+
 
                         <div class="col-md-12 text-center">
                             <button type="submit" class="post-btn">

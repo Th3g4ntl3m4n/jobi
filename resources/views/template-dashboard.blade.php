@@ -90,6 +90,11 @@ $user_type= Auth::user()->type;
 
         <div class="text-end">
         @switch($user_type)
+        @case('0')
+          <!-- <button type="button" class="btn btn-outline-light me-2">Dashboard</button>             -->
+          <a href="{{ route('posts.create')}}" type="button" class="btn btn-info">Publica un post</a>
+          @break
+
             @case('1')
           <button type="button" class="btn btn-outline-light me-2">Dashboard</button>            
           <a href="{{ route('cvs.create')}}" type="button" class="btn btn-danger">Completa tu CV</a>

@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('template-dashboard')
 
 @section('content')
 

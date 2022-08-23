@@ -80,4 +80,12 @@ class User extends Authenticatable
     }
 
     
+     //Relacion 1 muchos, 1 usuario tiene muchas publicaciones
+     public function posts() 
+     {
+         return $this->hasMany(Post::class);
+     }
+
+
+    
 }

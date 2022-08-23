@@ -16,6 +16,15 @@ $user_type= Auth::user()->type;
     <title>Dashboard JOBI v1.0</title>
 <style>
 
+.containter-canvas2{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ED3237;
+    background-image:url({{url('img/banner/3.jpg')}}) ;
+    background-size: cover;
+    height:100vh ;
+}
+
 .containter-canvas1{
   display: grid;
     grid-template-columns: 1fr 1fr;
@@ -100,6 +109,10 @@ $user_type= Auth::user()->type;
 
         <div class="text-end">
         @switch($user_type)
+        @case('0')
+          <!-- <button type="button" class="btn btn-outline-light me-2">Dashboard</button>             -->
+          <a href="{{ route('posts.create')}}" type="button" class="btn btn-info">Publica un post</a>
+          @break
             @case('1')
           <button type="button" class="btn btn-outline-light me-2">Dashboard</button>            
           <a href="{{ route('cvs.create')}}" type="button" class="btn btn-danger">Completa tu CV</a>
@@ -169,7 +182,14 @@ $user_type= Auth::user()->type;
 
       @switch($user_type)
                             @case('0')
-                                @include('dashboard.case0')
+                            <div class="containter-canvas2">
+                              <div class="left">
+                                <h1>Publica un nuevo post</h1>
+                                <a href="{{ route('cvs.create')}}" class="btn btn-info">Publica tu post</a> <br>
+                                <img src="{{ asset('img/logojobi.png')}}" alt="" width="250px" height="150px">
+                              </div>
+                              <div class="rigth">rigth</div>
+                            </div>  
                             @break
  
                             @case('1')

@@ -5,6 +5,7 @@ use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\CvController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 
 Route::controller(PageController::class)->group(function(){
@@ -32,6 +33,7 @@ Route::get('/details', function () {
 
 
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -39,6 +41,7 @@ Route::get('/dashboard', function () {
 Route::resource('cvs', CvController::class);
 Route::resource('companies', CompaniesController::class);
 Route::resource('Comp', OffersController::class);
+Route::resource('posts', PostController::class);
 
 
 Route::resource('Comp', 'App\Http\Controllers\OffersController');
@@ -52,6 +55,9 @@ Route::get('Comp/{id}/show', 'App\Http\Controllers\OffersController@show' ,funct
 })->name('offers.show');
 
 Route::get('Offers', 'App\Http\Controllers\OffersController@index')->name('offers.index');
+Route::get('Posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
+
+
 
 Route::post('/create_user', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('user.store');
 
@@ -62,6 +68,8 @@ Route::get('jobs/{job}', [OffersController::class, 'showjob'])->name('jobs.showj
 Route::get('/showalljobs', [OffersController::class, 'ShowAllJobs'])->name('showalljobs');
 Route::get('/showallusers', [CvController::class, 'ShowAllUsers'])->name('showallusers');
 Route::get('/showallcompanies', [CvController::class, 'ShowAllcompanies'])->name('showallcompanies');
+
+
 
 Route::get('/{id}/details', 'App\Http\Controllers\OffersController@showJobDetails')->name('details');
 

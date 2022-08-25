@@ -1,5 +1,6 @@
 
 
+
 @extends('template')
 
 @section('main_content')
@@ -272,7 +273,12 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
 				</div>
 
+
+				
+
 				<div class="row">
+
+				@foreach($posts as $post)
 					<div class="col-lg-4 col-sm-6">
 						<div class="blog-card">
 							<div class="blog-img">
@@ -288,16 +294,16 @@
 									</li>
 									<li>
 										<i class='bx bx-calendar'></i>
-										7 Feb, 2021
+										{{$post['created_at']}}
 									</li>
 								</ul>
 
 								<h3>
 									<a href="blog-details.html">
-										How to Indroduce in Yourself in Job Interview?
+									{{$post['title']}}
 									</a>
 								</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+								<p>{{$post['body']}}</p>
 
 								<a href="blog-details.html" class="blog-btn">
 									Read More
@@ -306,6 +312,8 @@
 							</div>
 						</div>
 					</div>
+
+					@endforeach
 
 
 					

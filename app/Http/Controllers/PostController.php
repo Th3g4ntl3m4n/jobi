@@ -11,9 +11,9 @@ class PostController extends Controller
 
     public function index(){
 
-        return view('home', [
+       /* return view('home', [
             'posts' => Post::latest()->paginate()
-        ]);
+        ]);*/
     }
 
     public function create(Post $post){
